@@ -12,10 +12,10 @@ struct Student {
   int id;
   float GPA;
 };
-int add(vector<tuple<char*, char*, float>>& data);
+vector<Student> add(vector<Student>& data);
 int print();
 int main() {
-  vector<tuple<char*, char*, float>> data;
+  vector<Student> data;
   char input[7];
   bool con = true;
   while (con == true) {
@@ -33,7 +33,7 @@ int main() {
     }
   }
 }
-int add(vector<tuple<char*, char*, float>>& data) {
+vector<Student> add(vector<Student>& data) {
   Student s;
     cout << "enter a first name\n";
     cin >> s.fname;
@@ -41,12 +41,13 @@ int add(vector<tuple<char*, char*, float>>& data) {
     cin >> s.lname;
     cout << "enter a 2 decimal GPA\n";
     cin >> s.GPA;
-    data.emplace_back(s.fname, s.lname, s.GPA);
-  return 0;
+    data.push_back(s);
+  return data;
 }
 int print() {
   Student s;
-    cout << s.fname << " " << s.lname << " " << s.GPA;
+  cout << s.fname << " " << s.lname << " " << s.GPA;
+  //cout << data;
   return 0;
 }
 
