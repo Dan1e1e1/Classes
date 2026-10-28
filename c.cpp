@@ -1,20 +1,34 @@
 #include <iostream>
+#include <vector>
+
 using namespace std;
 
-class parent {
- protected:
-  char title;
-  int year;
- private:
-  char publisher;
-  int rating;
-  int duration;
-  char director;
+//adding
+void add();
+
+void addVideo(char title, int year, char publisher, char rating);
+void addMusic(char title, char artist, int year, int duration, char publisher);
+void addMovie(char title, char director, int year, int duration, char rating);
+
+void printTitle();
+void printYear();
+
+class videoItem {
  public:
-  char* getTitle();
-  int getYear();
-  char* getPublisher();
-  int getRating();
-  int getDuration();
-  char* getDirector();
+  char title[81];
+  int year;
+  char publisher[81];
+  char rating[81];
+  
+  videoItem(const char* t, int y, const char* p, const char* r) {
+    year = y;
+    vector<videoItem> videoItemV;
+  
+  }
 };
+int main() {
+  videoItem videoItemV;
+  for (const auto& value : videoItemV) {
+    cout << value;
+  }
+}
