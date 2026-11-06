@@ -1,14 +1,15 @@
 #include <iostream>
-#include "parent.h"
+#include "videochild.h"
 using namespace std;
 
 class video {
  public:
+  video(char title, int year, char publisher, char rating);
   char getTitle();
   int getYear();
   char getPublisher();
   char getRating();
- private:
+ protected:
   char title;
   int year;
   char publisher;
