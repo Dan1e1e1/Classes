@@ -4,6 +4,7 @@ using namespace std;
 
 class video {
  public:
+  //constructor
   video(char title, int year, char publisher, char rating);
   char getTitle();
   int getYear();
