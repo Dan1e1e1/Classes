@@ -1,8 +1,11 @@
 #include <iostream>
-//#include "video.h"
+
+#include <vector>
+#include "video.h"
 using namespace std;
 
 int main() {
-  cout << "adding video";
-  addVideo()
+  cout << "adding a video";
+  addVideo();
+
 }

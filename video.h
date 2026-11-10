@@ -1,11 +1,14 @@
+#pragma once
 #include <iostream>
-#include "videochild.h"
+#include <vector>
+//#include "videochild.h"
 using namespace std;
 
-class video {
+class videoItem {
  public:
   //constructor
-  video(char title, int year, char publisher, char rating);
+  videoItem() : title(' '), year(0), publisher(' '), rating(' ') {}
+  //videoItem(char title, int year, char publisher, char rating);
   char getTitle();
   int getYear();
   char getPublisher();
@@ -15,8 +18,9 @@ class video {
   int year;
   char publisher;
   char rating;
-};
 
+};
+vector<videoItem> addVideo();
 //videoItem() {}
  //videoItem(const char* t, int y, const char* p, const char* r) {
 //strncpy(title, t, sizeof(title) - 1);

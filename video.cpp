@@ -1,7 +1,9 @@
 #include <iostream>
+#include <vector>
 #include "video.h"
 using namespace std;
-vector<videoItem> video::addVideo() {
+
+vector<videoItem> addVideo() {
   vector<videoItem> v;
   videoItem item;
   cout << "enter a title ";
