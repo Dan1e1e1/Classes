@@ -33,6 +33,7 @@ void addMovie(vector<Media*>& database) {
   cin >> duration;
   cout << "Enter rating out of 10: ";
   cin >> rating;
+  cin.ignore();
   movieItem* item = new movieItem(title, director, year, duration, rating);
   database.push_back(item);
   cout << "added movie" << endl;

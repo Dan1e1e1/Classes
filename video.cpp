@@ -30,7 +30,7 @@ void addVideo(vector<Media*>& database) {
   cin.getline(publisher, 81);
   cout << "enter a rating";
   cin >> rating;
-
+  cin.ignore();
   videoItem* item = new videoItem(title, year, publisher, rating);
   database.push_back(item);
 }
