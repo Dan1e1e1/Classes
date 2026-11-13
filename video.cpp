@@ -33,4 +33,5 @@ void addVideo(vector<Media*>& database) {
   cin.ignore();
   videoItem* item = new videoItem(title, year, publisher, rating);
   database.push_back(item);
+  cout << "Added video";
 }
