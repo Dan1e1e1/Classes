@@ -14,6 +14,9 @@ const char* musicItem::getArtist() {
 const char* musicItem::getPublisher() {
   return publisher;
 }
+float musicItem::getDuration() {
+  return duration;
+}
 void addMusic(vector<Media*>& database) {
   char title[81];
   char artist[81];
