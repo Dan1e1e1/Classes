@@ -53,8 +53,8 @@ int main() {
       cout << "Enter the title or year in the media database" << endl;
       cin.getline(find, 81);
       bool found = false;
-      for (int i = 0; i < length; i++) {
-	if (strcmp(find, database[i]->getTitle()) || (atoi(find) == database[i]->getYear()) == 0) {
+      for (int i = 0; i < database.size(); i++) {
+	if (strcmp(find, database[i]->getTitle()) == 0|| (atoi(find) == database[i]->getYear())) {
 	  database[i]->print();
 	  found = true;
 	  char confirmation;
@@ -63,6 +63,9 @@ int main() {
 	  cin.ignore();
 	  if (confirmation == 'y') {
 	    delete database[i];
+	    database.erase(database.begin() + i); //fix segmentation fault
+	    i--;
+	    length--;
 	  }
 	}
       }
