@@ -50,7 +50,19 @@ int main() {
       }
     }
     if (strcmp(input, "DELETE") == 0) {
-      cout << "called delete";
+      cout << "Enter the title or year in the media database" << endl;
+      for (int i = 0; i < length; i++) {
+	if (strcmp(find, database[i]->getTitle()) || (atoi(find) == database[i]->getYear()) == 0) {
+	  database[i]->print();
+	  char confirmation;
+	  cout << "Are you sure you want to delete this/these items?(y/n)" << endl;
+	  cin >> confirmation;
+	  cin.ignore();
+	  if (confirmation == 'y') {
+	    delete database[i];
+	  }
+	}
+      }
     }
     if (strcmp(input, "QUIT") == 0) {
       loop = false;
