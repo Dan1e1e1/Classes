@@ -9,6 +9,7 @@ class movieItem : public Media {
   const char* getDirector();
   float getDuration();
   float getRating();
+  void print() override;
  private:
   char director[81];
   float duration;

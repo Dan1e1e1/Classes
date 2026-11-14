@@ -35,3 +35,11 @@ void addVideo(vector<Media*>& database) {
   database.push_back(item);
   cout << "added video" << endl;
 }
+void videoItem::print() {
+  cout << "\n\n\n\n\n";
+  cout <<"Video game" << endl;
+  cout << "Title: " << getTitle() << endl;
+  cout << "Year: " << getYear() << endl;
+  cout << "Publisher: " << getPublisher() << endl;
+  cout << "Rating: " << getRating() << endl;
+}

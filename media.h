@@ -8,6 +8,7 @@ class Media {
   Media(const char t[], int y);
   const char* getTitle();
   int getYear();
+  virtual void print();
  protected:
   char title[81];
   int year;

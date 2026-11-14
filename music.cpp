@@ -32,10 +32,20 @@ void addMusic(vector<Media*>& database) {
   cin.getline(artist, 81);
   cout << "Enter duration" << endl;
   cin >> duration;
+  cin.ignore();//prevents skipping
   cout << "Enter a publisher" << endl;
   cin.getline(publisher, 81);
 
   musicItem* item = new musicItem(title, artist, year, duration, publisher);
   database.push_back(item);
   cout << "Added music" << endl;
+}
+void musicItem::print() {
+  cout << "\n\n\n\n\n";
+  cout << "Music" << endl;
+  cout << "Title: " << getTitle() << endl;
+  cout << "Artist: " << getArtist() << endl;
+  cout << "Year: " << getYear() << endl;
+  cout << "Duration: " << getDuration() << endl;
+  cout << "Publisher: " << getPublisher() << endl;
 }

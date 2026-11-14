@@ -38,3 +38,12 @@ void addMovie(vector<Media*>& database) {
   database.push_back(item);
   cout << "added movie" << endl;
 }
+void movieItem::print() {
+  cout << "\n\n\n\n\n";
+  cout << "Movie" << endl;
+  cout << "Title: " << getTitle() << endl;
+  cout << "Director: " << getDirector() << endl;
+  cout << "Year: " << getYear() << endl;
+  cout << "Duration: " << getDuration() << endl;
+  cout << "Rating: " << getRating() << endl;
+}

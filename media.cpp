@@ -12,3 +12,7 @@ const char* Media::getTitle() {
 int Media::getYear() {
   return year;
 }
+void Media::print() {
+  cout << "Title: " << title << endl;
+  cout << "Year: " << endl;
+}

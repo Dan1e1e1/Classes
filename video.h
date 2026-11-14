@@ -10,6 +10,7 @@ class videoItem : public Media {
   videoItem(const char t[], int y, const char p[], float r);
   const char* getPublisher();
   float getRating();
+  void print() override;
  private:
   char publisher[81];
   float rating;

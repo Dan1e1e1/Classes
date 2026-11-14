@@ -31,15 +31,21 @@ int main() {
       }
     }
     if (strcmp(input, "SEARCH") == 0) {
-      cout << "Enter the title or year in the media database";
+      cout << "Enter the title or year in the media database" << endl;
       cin.getline(find, 81);
+      bool found = false;
       length = database.size();
       for (int i = 0; i < length; i++) {
 	if (strcmp(find, database[i]->getTitle()) == 0) {
-	  cout << database[i]->getYear();
+	  database[i]->print();
+	  found = true;
 	}
 	if (atoi(find) == database[i]->getYear()) {
-	  cout << database[i]->getTitle();
+	  database[i]->print();
+	  found = true;
+	}
+	if (found == false) {
+	  cout << "Sorry, that wasnt a valid title or year, try again";
 	}
       }
     }

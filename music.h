@@ -11,6 +11,7 @@ class musicItem : public Media {
   const char* getArtist();
   float getDuration();
   const char* getPublisher();
+  void print() override;
  private:
   char artist[81];
   float duration;
