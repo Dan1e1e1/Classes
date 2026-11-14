@@ -44,24 +44,30 @@ int main() {
 	  database[i]->print();
 	  found = true;
 	}
-	if (found == false) {
-	  cout << "Sorry, that wasnt a valid title or year, try again";
-	}
+      }
+      if (found == false) {
+	cout << "Sorry, that wasnt a valid title or year, try again";
       }
     }
     if (strcmp(input, "DELETE") == 0) {
       cout << "Enter the title or year in the media database" << endl;
+      cin.getline(find, 81);
+      bool found = false;
       for (int i = 0; i < length; i++) {
 	if (strcmp(find, database[i]->getTitle()) || (atoi(find) == database[i]->getYear()) == 0) {
 	  database[i]->print();
+	  found = true;
 	  char confirmation;
-	  cout << "Are you sure you want to delete this/these items?(y/n)" << endl;
+	  cout << "Are you sure you want to delete this item?(y/n)" << endl;
 	  cin >> confirmation;
 	  cin.ignore();
 	  if (confirmation == 'y') {
 	    delete database[i];
 	  }
 	}
+      }
+      if (found == false) {
+	cout << "Sorry, that wasnt a valid title or year, try again";
       }
     }
     if (strcmp(input, "QUIT") == 0) {
