@@ -16,22 +16,22 @@ float videoItem::getRating() {
   return rating;
 }
 void addVideo(vector<Media*>& database) {
-
   char title[81];
   char publisher[81];
   int year;
   float rating;
   
-  cout << "enter a title ";
+  cout << "enter a title" << endl;
   cin.getline(title, 81);
-  cout << "enter a year";
+  cout << "enter a year" << endl;
   cin >> year;
-  cout << "enter a publisher";
+  cin.ignore(); //prevent skipping
+  cout << "enter a publisher" << endl;
   cin.getline(publisher, 81);
-  cout << "enter a rating";
+  cout << "enter a rating" << endl;
   cin >> rating;
   cin.ignore();
   videoItem* item = new videoItem(title, year, publisher, rating);
   database.push_back(item);
-  cout << "Added video";
+  cout << "added video" << endl;
 }

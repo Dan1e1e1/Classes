@@ -20,15 +20,16 @@ void addMusic(vector<Media*>& database) {
   char publisher[81];
   int year;
   float duration;
-  cout << "Enter a title: ";
+  cout << "Enter a title" << endl;
   cin.getline(title, 81);
-  cout << "Enter a year: ";
+  cout << "Enter a year" << endl;
   cin >> year;
   cin.ignore();
-  cout << "Enter duration: ";
+  cout << "Enter an artist" << endl;
+  cin.getline(artist, 81);
+  cout << "Enter duration" << endl;
   cin >> duration;
-  cout << "Enter a publisher: ";
-  cin.ignore();
+  cout << "Enter a publisher" << endl;
   cin.getline(publisher, 81);
 
   musicItem* item = new musicItem(title, artist, year, duration, publisher);
