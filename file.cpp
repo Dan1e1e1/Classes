@@ -71,13 +71,13 @@ int main() {
       }
     }
     if (strcmp(input, "QUIT") == 0) {
-      loop = false;
+      loop = false; //delete the remaining objects
+      for (int i = 0; i < database.size(); i++) {
+	delete database[i];
+      }
+      database.clear();
     }
   }
-  //vector<Media*> database;
-  //addMovie(database);
-  //cout << database[0]->getTitle();
-  //cout << database[0]->getYear();
   return 0; 
 
 }

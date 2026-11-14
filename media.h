@@ -6,6 +6,7 @@ using namespace std;
 class Media {
  public:
   Media(const char t[], int y);
+  virtual ~Media();
   const char* getTitle();
   int getYear();
   virtual void print();
